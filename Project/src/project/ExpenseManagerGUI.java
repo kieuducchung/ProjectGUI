@@ -1,5 +1,6 @@
 package project;
 
+import java.awt.Color;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +23,9 @@ public class ExpenseManagerGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //Dùng để đảm bảo khi đóng của sổ chương trình sẽ dừng hoàn toàn
         frame.setSize(600, 500); //Đặt kích thước cửa sổ, chiều rộng 600 pixel, chiều dài 500 pixel
 
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.LIGHT_GRAY);
+
         // Create buttons
         JButton addExpense = new JButton("Add Expense");
         JButton addIncome = new JButton("Add Income");
@@ -30,8 +34,25 @@ public class ExpenseManagerGUI {
         JButton totalExpense = new JButton("Total Expense");
         JButton totalIncome = new JButton("Total Income");
 
+        addExpense.setBackground(Color.GREEN); // Đổi màu nền của nút thành xanh lá cây
+        addExpense.setForeground(Color.BLACK); // Chữ trên nút màu đen
+
+        addIncome.setBackground(Color.GREEN); // Đổi màu nền xanh lá cây
+        addIncome.setForeground(Color.BLACK); // Chữ màu đen
+
+        viewAllExpenses.setBackground(Color.ORANGE); //Đổi màu nền của nút thành màu cam
+        viewAllExpenses.setForeground(Color.BLACK); // Chữ màu đen
+
+        viewAllIncomes.setBackground(Color.ORANGE);
+        viewAllIncomes.setForeground(Color.BLACK);
+
+        totalExpense.setBackground(Color.RED);
+        totalExpense.setForeground(Color.BLACK);
+
+        totalIncome.setBackground(Color.RED);
+        totalIncome.setForeground(Color.BLACK);
+
         //Thêm từng nút vào trong panel
-        JPanel panel = new JPanel();
         panel.add(addExpense);
         panel.add(addIncome);
         panel.add(viewAllExpenses);
